@@ -1,0 +1,644 @@
+/* =====================================================
+   PORTFOLIO - RESPONSIVE STYLESHEET
+   Mobile-First Approach
+   ===================================================== */
+
+/* =====================================================
+   BREAKPOINTS:
+   - Mobile: < 576px (default)
+   - Small Tablet: 576px - 767px
+   - Tablet: 768px - 991px
+   - Desktop: 992px - 1199px
+   - Large Desktop: >= 1200px
+   ===================================================== */
+
+/* =====================================================
+   MOBILE STYLES (Default - até 576px)
+   ===================================================== */
+
+/* Header Mobile */
+.nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    padding: calc(var(--header-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
+    transition: right var(--transition-base);
+    z-index: calc(var(--z-fixed) - 1);
+    border-left: 1px solid var(--color-border);
+}
+
+.nav__menu.show-menu {
+    right: 0;
+}
+
+.nav__list {
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.nav__link {
+    font-size: var(--fs-md);
+}
+
+.nav__toggle {
+    display: block;
+}
+
+.nav__close {
+    display: block;
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold-primary);
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.nav__close:hover {
+    background: var(--color-gold-primary);
+    color: var(--color-black-pure);
+}
+
+/* Hero Mobile */
+.hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: var(--space-2xl);
+}
+
+.hero__content {
+    order: 2;
+}
+
+.hero__image {
+    order: 1;
+    margin-bottom: var(--space-xl);
+}
+
+.hero__image-wrapper {
+    width: 280px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.hero__description {
+    margin: 0 auto var(--space-xl);
+}
+
+.hero__buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+}
+
+.hero__social {
+    justify-content: center;
+}
+
+.scroll-indicator {
+    display: none;
+}
+
+/* About Mobile */
+.about__container {
+    grid-template-columns: 1fr;
+}
+
+.about__image {
+    max-width: 350px;
+    margin: 0 auto var(--space-xl);
+}
+
+.about__experience-badge {
+    right: 0;
+    bottom: var(--space-md);
+}
+
+.about__content {
+    padding-left: 0;
+    text-align: center;
+}
+
+.about__info {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.specialties__tags {
+    justify-content: center;
+}
+
+.about__content .btn {
+    max-width: 100%;
+}
+
+/* Skills Mobile */
+.skills__container {
+    grid-template-columns: 1fr;
+}
+
+/* Portfolio Mobile */
+.portfolio__filters {
+    gap: var(--space-sm);
+}
+
+.filter__btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--fs-xs);
+}
+
+.portfolio__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+/* Experience Mobile */
+.experience__timeline {
+    padding-left: var(--space-xl);
+}
+
+.experience__timeline::before {
+    left: 8px;
+}
+
+.timeline__marker {
+    left: -28px;
+}
+
+.timeline__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+/* Testimonials Mobile */
+.carousel__container {
+    grid-template-columns: 1fr;
+}
+
+.testimonial__card:not(:first-child) {
+    display: none;
+}
+
+.carousel__controls {
+    display: flex;
+}
+
+/* Contact Mobile */
+.contact__container {
+    grid-template-columns: 1fr;
+}
+
+.contact__info {
+    text-align: left;
+}
+
+.contact__details {
+    align-items: flex-start;
+}
+
+.contact__social {
+    justify-content: flex-start;
+}
+
+.contact__form {
+    padding: var(--space-xl);
+}
+
+/* Footer Mobile */
+.footer__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__description {
+    max-width: 100%;
+}
+
+.footer__nav {
+    align-items: center;
+}
+
+.footer__social .social-links {
+    justify-content: center;
+}
+
+.footer__bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+}
+
+/* Back to Top Mobile */
+.back-to-top {
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    width: 44px;
+    height: 44px;
+}
+
+/* =====================================================
+   SMALL TABLET (min-width: 576px)
+   ===================================================== */
+@media screen and (min-width: 576px) {
+    .hero__image-wrapper {
+        width: 320px;
+        height: 400px;
+    }
+
+    .hero__buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn {
+        width: auto;
+        max-width: none;
+    }
+
+    .about__info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact__form {
+        padding: var(--space-2xl);
+    }
+}
+
+/* =====================================================
+   TABLET (min-width: 768px)
+   ===================================================== */
+@media screen and (min-width: 768px) {
+    :root {
+        --container-padding: 2rem;
+    }
+
+    .section {
+        padding: var(--space-4xl) 0;
+    }
+
+    /* Hero Tablet */
+    .hero__container {
+        text-align: left;
+    }
+
+    .hero__image-wrapper {
+        width: 350px;
+        height: 450px;
+    }
+
+    .hero__buttons {
+        justify-content: flex-start;
+    }
+
+    .hero__social {
+        justify-content: flex-start;
+    }
+
+    .scroll-indicator {
+        display: flex;
+    }
+
+    /* About Tablet */
+    .about__container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about__image {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .about__content {
+        text-align: left;
+    }
+
+    .specialties__tags {
+        justify-content: flex-start;
+    }
+
+    /* Skills Tablet */
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials Tablet */
+    .carousel__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial__card:nth-child(2) {
+        display: block;
+    }
+
+    /* Contact Tablet */
+    .contact__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact__info {
+        text-align: left;
+    }
+
+    .contact__details {
+        align-items: flex-start;
+    }
+
+    .contact__social {
+        justify-content: flex-start;
+    }
+
+    /* Footer Tablet */
+    .footer__content {
+        grid-template-columns: 2fr 1fr 1fr;
+        text-align: left;
+    }
+
+    .footer__logo {
+        align-items: flex-start;
+    }
+
+    .footer__nav {
+        align-items: flex-start;
+    }
+
+    .footer__social .social-links {
+        justify-content: flex-start;
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+    }
+}
+
+/* =====================================================
+   DESKTOP (min-width: 992px)
+   ===================================================== */
+@media screen and (min-width: 992px) {
+    /* Header Desktop */
+    .nav__menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        backdrop-filter: none;
+        padding: 0;
+        border: none;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        gap: var(--space-md);
+    }
+
+    .nav__link {
+        font-size: var(--fs-xs);
+    }
+
+    .nav__toggle,
+    .nav__close {
+        display: none;
+    }
+
+    /* Hero Desktop */
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero__content {
+        order: 1;
+    }
+
+    .hero__image {
+        order: 2;
+        margin-bottom: 0;
+    }
+
+    .hero__image-wrapper {
+        width: 380px;
+        height: 480px;
+    }
+
+    /* About Desktop */
+    .about__container {
+        grid-template-columns: 1fr 1.2fr;
+        gap: var(--space-3xl);
+    }
+
+    .about__content {
+        padding-left: var(--space-xl);
+    }
+
+    .about__experience-badge {
+        right: -30px;
+    }
+
+    /* Portfolio Desktop */
+    .portfolio__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Testimonials Desktop */
+    .carousel__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonial__card:nth-child(3) {
+        display: block;
+    }
+
+    .carousel__controls {
+        display: none;
+    }
+
+    /* Contact Desktop */
+    .contact__container {
+        grid-template-columns: 1fr 1.2fr;
+        gap: var(--space-3xl);
+    }
+}
+
+/* =====================================================
+   LARGE DESKTOP (min-width: 1200px)
+   ===================================================== */
+@media screen and (min-width: 1200px) {
+    :root {
+        --container-max: 1200px;
+    }
+
+    .nav__list {
+        gap: var(--space-lg);
+    }
+
+    .nav__link {
+        font-size: var(--fs-sm);
+    }
+
+    .hero__image-wrapper {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+/* =====================================================
+   EXTRA LARGE DESKTOP (min-width: 1400px)
+   ===================================================== */
+@media screen and (min-width: 1400px) {
+    :root {
+        --container-max: 1320px;
+    }
+
+    .nav__list {
+        gap: var(--space-xl);
+    }
+
+    .nav__link {
+        font-size: var(--fs-sm);
+        letter-spacing: 1px;
+    }
+}
+
+/* =====================================================
+   PREFERÊNCIAS DE MOVIMENTO REDUZIDO
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+
+    .loader-ring {
+        animation: none;
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none;
+    }
+}
+
+/* =====================================================
+   MODO DE ALTO CONTRASTE
+   ===================================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: rgba(255, 215, 0, 0.5);
+        --color-text-secondary: #d0d0d0;
+    }
+
+    .btn--primary {
+        border: 2px solid var(--color-black-pure);
+    }
+}
+
+/* =====================================================
+   IMPRESSÃO
+   ===================================================== */
+@media print {
+    .header,
+    .loading-screen,
+    .cursor,
+    .cursor-follower,
+    #particles-canvas,
+    .scroll-indicator,
+    .back-to-top,
+    .nav__toggle,
+    .carousel__controls {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+}
+
+/* =====================================================
+   LANDSCAPE MOBILE
+   ===================================================== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero__image-wrapper {
+        width: 200px;
+        height: 250px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* =====================================================
+   CORREÇÕES ESPECÍFICAS PARA iOS
+   ===================================================== */
+@supports (-webkit-touch-callout: none) {
+    /* Fix para altura da viewport no iOS */
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+
+    /* Fix para o bounce effect no iOS */
+    .nav__menu {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* =====================================================
+   CORREÇÕES ESPECÍFICAS PARA FIREFOX
+   ===================================================== */
+@-moz-document url-prefix() {
+    .text-gradient {
+        background-clip: text;
+        -moz-background-clip: text;
+    }
+}
