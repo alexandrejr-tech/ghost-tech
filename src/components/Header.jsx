@@ -110,6 +110,7 @@ export default function Header() {
 
         <button
           className={`nav__toggle${menuOpen ? ' active' : ''}`}
+          id="nav-toggle"
           onClick={openMenu}
           aria-label="Abrir menu"
           aria-expanded={menuOpen}

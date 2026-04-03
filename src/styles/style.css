@@ -511,7 +511,8 @@ strong {
 
 /* Esconder toggle quando menu está aberto (usa o nav__close interno) */
 .nav__toggle.active {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .nav__close {
