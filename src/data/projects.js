@@ -6,7 +6,7 @@ export const projects = [
     image: '/assets/images/hero-evolux.jpeg',
     github: 'https://github.com/alexandrejr-tech/evoluxx',
     demo: 'https://evoluxx-delta.vercel.app/',
-    tech: ['React', 'TypeScript', 'Supabase', 'Zustand']
+    tech: ['React', 'JavaScript', 'Supabase', 'Zustand']
   },
   {
     id: 3,
