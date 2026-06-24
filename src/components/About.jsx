@@ -44,24 +44,26 @@ export default function About() {
               <div className="about__image-decoration"></div>
             </div>
             <div className="about__experience-badge">
-              <span className="badge__number">1+</span>
+              <span className="badge__number">2+</span>
               <span className="badge__text">Anos de<br/>Experiência</span>
             </div>
           </div>
 
           <div className="about__content">
             <p className="about__description animate-on-scroll" data-animation="fade-up">
-              Sou o <strong>Alexandre Junior</strong>, <strong>Desenvolvedor Front-end | Back-end</strong> apaixonado por tecnologia e inovação.
-              Atualmente atuo na ODuo Assessoria, desenvolvendo soluções digitais que transformam negócios.
+              Sou o <strong>Alexandre Junior</strong>, <strong>Desenvolvedor Full-Stack</strong> com 2 anos de experiência
+              construindo aplicações web completas, do front-end ao back-end.
             </p>
             <p className="about__description animate-on-scroll" data-animation="fade-up" data-delay="100">
-              Minha jornada vai desde o desenvolvimento front-end | back-end até a implementação de IAs de atendimento
-              e automações inteligentes com N8N, sempre buscando as melhores práticas e tecnologias do mercado.
+              Na <strong>ODuo Assessoria</strong>, desenvolvi 60+ projetos web — entre landing pages, sites institucionais,
+              dashboards e ferramentas internas — além de 8+ automações via N8N que reduziram operações manuais em 60%.
+              Tenho formação complementar em Gestão de Projetos (MBA), que agrega visão estratégica ao desenvolvimento,
+              sempre com foco em soluções digitais orientadas a resultado.
             </p>
 
             <div className="about__info animate-on-scroll" data-animation="fade-up" data-delay="200">
               <div className="about__info-item">
-                <span className="info__number">20+</span>
+                <span className="info__number">60+</span>
                 <span className="info__title">Projetos<br/>Entregues</span>
               </div>
               <div className="about__info-item">
@@ -77,7 +79,7 @@ export default function About() {
             <div className="about__specialties animate-on-scroll" data-animation="fade-up" data-delay="300">
               <h3 className="specialties__title">Especialidades:</h3>
               <div className="specialties__tags">
-                {['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Node.js', 'PHP', 'MySQL', 'WordPress', 'N8N'].map(tag => (
+                {['React.js', 'Node.js', 'JavaScript', 'PHP', 'PostgreSQL', 'N8N', 'Git / GitHub', 'REST APIs', 'HTML / CSS'].map(tag => (
                   <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>

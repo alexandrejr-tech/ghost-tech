@@ -56,7 +56,7 @@ export default function Hero() {
             <span className="text-gradient">Alexandre Junior</span>
           </h1>
           <h2 className="hero__profession animate-on-scroll" data-animation="fade-up" data-delay="200">
-            Desenvolvedor Front-end | Back-end
+            Desenvolvedor Full-Stack
           </h2>
           <p className="hero__description animate-on-scroll" data-animation="fade-up" data-delay="400">
             Transformando ideias em soluções digitais inovadoras.
@@ -69,7 +69,7 @@ export default function Hero() {
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="/assets/Alexandre_Jr.pdf" className="btn btn--secondary" download>
+            <a href="/assets/alexandre-junior.pdf" className="btn btn--secondary" download="Alexandre-Junior-CV.pdf">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7,10 12,15 17,10"/>
